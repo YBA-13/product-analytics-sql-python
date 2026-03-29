@@ -34,3 +34,21 @@ SELECT
 FROM orders
 GROUP BY category
 ORDER BY total_revenue DESC;
+
+SELECT   
+    ROUND(AVG(price * quantity), 2) AS avg_order_value
+FROM orders;
+
+SELECT 
+    customer_id,
+    COUNT(order_id) AS orders_count
+FROM orders
+GROUP BY customer_id
+ORDER BY orders_count DESC;
+
+SELECT 
+    customer_id,
+    COUNT(order_id) AS orders_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(order_id) > 1;
