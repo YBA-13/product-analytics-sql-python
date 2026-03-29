@@ -30,6 +30,17 @@ FROM orders
 GROUP BY customer_id
 ORDER BY total_revenue DESC;
 
+
+### 2. Revenue by Category
+```sql
+SELECT 
+    category,
+    SUM(price * quantity) AS total_revenue
+FROM orders
+GROUP BY category
+ORDER BY total_revenue DESC;
+
 ## 💡 Insights
 - Customer 101 generates the highest revenue
 - Repeat customers bring more value
+- Electronics category generates the highest revenue
