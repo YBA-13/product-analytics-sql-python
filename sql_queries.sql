@@ -26,3 +26,11 @@ FROM orders
 GROUP BY customer_id
 ORDER BY total_revenue DESC;
 
+```sql
+-- 4. Топ категорий по выручке
+SELECT 
+    category,
+    SUM(price * quantity) AS total_revenue
+FROM orders
+GROUP BY category
+ORDER BY total_revenue DESC;
