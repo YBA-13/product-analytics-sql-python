@@ -40,7 +40,31 @@ FROM orders
 GROUP BY category
 ORDER BY total_revenue DESC;
 
+
+### 3. Average Order Value (AOV)
+```sql
+SELECT   
+    ROUND(AVG(price * quantity), 2) AS avg_order_value
+FROM orders;
+
+
+SELECT 
+    customer_id,
+    COUNT(order_id) AS orders_count
+FROM orders
+GROUP BY customer_id
+ORDER BY orders_count DESC;
+
+SELECT 
+    customer_id,
+    COUNT(order_id) AS orders_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(order_id) > 1;
+
 ## 💡 Insights
 - Customer 101 generates the highest revenue
-- Repeat customers bring more value
 - Electronics category generates the highest revenue
+- Average order value is 15,571.43
+- Customers 101 and 102 are repeat buyers
+- Repeat customers generate the most revenue
