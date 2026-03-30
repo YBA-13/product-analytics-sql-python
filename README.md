@@ -68,3 +68,17 @@ HAVING COUNT(order_id) > 1;
 - Average order value is 15,571.43
 - Customers 101 and 102 are repeat buyers
 - Repeat customers generate the most revenue
+
+## 🐍 Python Analysis
+The SQL dataset was additionally analyzed in Python using pandas and matplotlib.
+
+### Visualizations
+- Revenue by category
+- Revenue by customer
+
+### Tools Used
+- SQL
+- Python
+- pandas
+- matplotlib
+- GitHub
